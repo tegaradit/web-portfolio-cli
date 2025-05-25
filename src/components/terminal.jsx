@@ -1,5 +1,5 @@
-import Home from "./home";
-import Project from "./project";
+import Home from "./Home";
+import Project from "./Project";
 import Riwayat from "./Riwayat";
 import Kisah from "./kisah";
 import Contact from "./contact";
