@@ -1,8 +1,8 @@
-import Home from "../components/home";
-import Project from "../components/project";
-import Riwayat from "../components/Riwayat";
-import Kisah from "../components/kisah";
-import Contact from "../components/contact";
+import Home from "./home";
+import Project from "./project";
+import Riwayat from "./Riwayat";
+import Kisah from "./kisah";
+import Contact from "./contact";
 
 export const Terminal = ({
   currentView,
