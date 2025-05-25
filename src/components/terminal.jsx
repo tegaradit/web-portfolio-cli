@@ -4,6 +4,8 @@ import Riwayat from "./Riwayat";
 import Kisah from "./kisah";
 import Contact from "./contact";
 
+import { useRef } from "react";
+
 export const Terminal = ({
   currentView,
   typedCommand,
@@ -12,15 +14,15 @@ export const Terminal = ({
   terminalOutput,
   keySoundPool,
 }) => {
-  let poolIndex = 0;
+  const poolIndex = useRef(0);
 
   const playTypeSound = () => {
     if (!keySoundPool?.current?.length) return;
 
-    const sound = keySoundPool.current[poolIndex];
+    const sound = keySoundPool.current[poolIndex.current];
     sound.currentTime = 0;
     sound.play().catch(() => {});
-    poolIndex = (poolIndex + 1) % keySoundPool.current.length;
+    poolIndex.current = (poolIndex.current + 1) % keySoundPool.current.length;
   };
 
   const viewComponents = {
